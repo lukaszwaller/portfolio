@@ -44,8 +44,10 @@ input[type="checkbox"] {
 }
 
 .toggle-wrapper {
-  display: inline-block;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 10px;
 }
 
 .toggle-label {
