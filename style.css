@@ -3,8 +3,8 @@
   --text-light: #000000;
   --background-dark: #1a1a1a;
   --text-dark: #ffffff;
-  --border-light: #b1b0b0;
-  --border-dark: #7a7a7a;
+  --border-light: #878787;
+  --border-dark: #aaaaaa;
 }
 
 [data-theme="light"] {
@@ -70,9 +70,10 @@ input[type="checkbox"] {
 .toggle-label::before {
   content: '';
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
+  border: 1px solid #cccccc;
   background-color: #ffffff;
   left: 0;
   top: 0;
@@ -93,8 +94,8 @@ input[type="checkbox"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
   margin-top: 20px;
 }
 
@@ -108,10 +109,21 @@ input[type="checkbox"] {
   width: 100px;
   border-right: 2px solid var(--border-color);
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
   color: var(--border-color);
-  padding-right: 10px;
+}
+
+.cv-timespan-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.cv-timespan-date div {
+  margin-left: 5px;
+  font-size: 14px;
 }
 
 .cv-entry {
@@ -122,10 +134,20 @@ input[type="checkbox"] {
   align-items: center;
 }
 
+.cv-entry-dot {
+  position: absolute;
+  left: -8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 7px;
+  background-color: #b1b0b0;
+  border: 2px solid var(--background-color);
+}
+
 .cv-entry img {
   width: 50px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
   object-fit: contain;
 }
 
@@ -139,13 +161,52 @@ input[type="checkbox"] {
   margin-bottom: 0;
 }
 
-.cv-entry-dot {
-  position: absolute;
-  top: 46%;
-  left: -8px;
-  width: 10px;
-  height: 10px;
-  border-radius: 7px;
-  background-color: #b1b0b0;
-  border: 2px solid white;
+@media screen and (max-width: 600px) {
+  .cv-container {
+    margin-left: 2%;
+    margin-right: 8%;
+  }
+
+  .cv-timespan {
+    width: 60px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-end;
+  }
+
+  .cv-timespan-date {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50px;
+  }
+
+  .cv-timespan-date div {
+    margin: 0;
+    font-size: auto;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+
+  .cv-entry {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  .cv-entry-dot {
+    position: absolute;
+    top: 19px;
+    left: -28px;
+    width: 10px;
+    height: 10px;
+    border-radius: 7px;
+    background-color: #b1b0b0;
+    border: 2px solid white;
+  }
+
+  .cv-entry img {
+    height: 50px;
+    margin: 0;
+  }
 }
