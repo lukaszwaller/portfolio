@@ -202,7 +202,7 @@ input[type="checkbox"] {
     height: 10px;
     border-radius: 7px;
     background-color: #b1b0b0;
-    border: 2px solid white;
+    border: 2px solid var(--background-color);
   }
 
   .cv-entry img {
