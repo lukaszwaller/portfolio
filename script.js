@@ -2,27 +2,19 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleSwitch = document.getElementById("toggle");
 
   toggleSwitch.addEventListener("change", function () {
-    if (toggleSwitch.checked) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+    setTheme(toggleSwitch.checked ? "dark" : "light");
   });
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    setTheme("dark");
-    toggleSwitch.checked = true;
-  } else {
-    const currentTheme = localStorage.getItem("theme");
-    if (currentTheme) {
-      document.documentElement.setAttribute("data-theme", currentTheme);
+  const currentTheme = localStorage.getItem("theme");
 
-      if (currentTheme === "dark") {
-        toggleSwitch.checked = true;
-      }
-    } else {
-      setTheme("light");
+  if (currentTheme) {
+    document.documentElement.setAttribute("data-theme", currentTheme);
+
+    if (currentTheme === "dark") {
+      toggleSwitch.checked = true;
     }
+  } else {
+    toggleSwitch.checked = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
 
   function setTheme(theme) {
