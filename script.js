@@ -2,14 +2,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const toggleSwitch = document.getElementById("toggle");
 
   toggleSwitch.addEventListener("change", function () {
-    if (toggleSwitch.checked) {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+    setTheme(toggleSwitch.checked ? "dark" : "light");
   });
 
   const currentTheme = localStorage.getItem("theme");
+
   if (currentTheme) {
     document.documentElement.setAttribute("data-theme", currentTheme);
 
@@ -17,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleSwitch.checked = true;
     }
   } else {
-    setTheme("light");
+    toggleSwitch.checked = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
   }
 
   function setTheme(theme) {
