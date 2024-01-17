@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (currentTheme === "dark") {
       toggleSwitch.checked = true;
     }
+  } else {
+    setTheme("light");
   }
 
   function setTheme(theme) {
