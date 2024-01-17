@@ -9,15 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const currentTheme = localStorage.getItem("theme");
-  if (currentTheme) {
-    document.documentElement.setAttribute("data-theme", currentTheme);
-
-    if (currentTheme === "dark") {
-      toggleSwitch.checked = true;
-    }
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme("dark");
+    toggleSwitch.checked = true;
   } else {
-    setTheme("light");
+    const currentTheme = localStorage.getItem("theme");
+    if (currentTheme) {
+      document.documentElement.setAttribute("data-theme", currentTheme);
+
+      if (currentTheme === "dark") {
+        toggleSwitch.checked = true;
+      }
+    } else {
+      setTheme("light");
+    }
   }
 
   function setTheme(theme) {
