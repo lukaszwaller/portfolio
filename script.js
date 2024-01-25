@@ -5,20 +5,18 @@ document.addEventListener("DOMContentLoaded", function () {
     setTheme(toggleSwitch.checked ? "dark" : "light");
   });
 
+  function setTheme(theme) {
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
+  }
+
   const currentTheme = localStorage.getItem("theme");
 
   if (currentTheme) {
     document.documentElement.setAttribute("data-theme", currentTheme);
-
-    if (currentTheme === "dark") {
-      toggleSwitch.checked = true;
-    }
+    toggleSwitch.checked = currentTheme === "dark";
   } else {
     toggleSwitch.checked = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  }
-
-  function setTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem("theme", theme);
+    setTheme(toggleSwitch.checked ? "dark" : "light");
   }
 });
