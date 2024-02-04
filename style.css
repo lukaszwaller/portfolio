@@ -126,6 +126,7 @@ input[type="checkbox"] {
   border-right: 2px solid var(--border-color);
   display: flex;
   color: var(--border-color);
+  padding-bottom: 20px;
 }
 
 .cv-timespan-date {
@@ -148,7 +149,7 @@ input[type="checkbox"] {
   flex-direction: row;
   position: relative;
   align-items: center;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .cv-entry-dot {
