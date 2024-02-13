@@ -104,6 +104,27 @@ input[type="checkbox"] {
   transform: translateX(30px);
 }
 
+.social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-media a {
+  margin: 10px;
+  text-decoration: none;
+}
+
+.social-icon {
+  fill: var(--text-color);
+  transition: scale 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
 .cv-container {
   display: flex;
   flex-direction: column;
