@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("theme", theme);
 
     if (theme === "dark") {
-      document.querySelector(".profile-pic").src = "assets/me-light.png";
+      document.querySelector(".profile-pic").src = "assets/me-light-min.png";
     } else {
-      document.querySelector(".profile-pic").src = "assets/me-dark.png";
+      document.querySelector(".profile-pic").src = "assets/me-dark-min.png";
     }
   }
 
@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleSwitch.checked = currentTheme === "dark";
 
     if (currentTheme === "dark") {
-      document.querySelector(".profile-pic").src = "assets/me-light.png";
+      document.querySelector(".profile-pic").src = "assets/me-light-min.png";
     } else {
-      document.querySelector(".profile-pic").src = "assets/me-dark.png";
+      document.querySelector(".profile-pic").src = "assets/me-dark-min.png";
     }
   } else {
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
