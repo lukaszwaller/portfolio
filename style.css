@@ -5,10 +5,8 @@
   --text-dark: #ffffff;
   --border-light: #878787;
   --border-dark: #aaaaaa;
-  --publications-light: #d8d8d8;
-  --publications-dark: #474747;
-  --publication-light: #ffffff;
-  --publication-dark: #1a1a1a;
+  --publication-light: #e8e7e7;
+  --publication-dark: #383838;
 }
 
 [data-theme="light"] {
@@ -39,7 +37,7 @@ body {
 }
 
 hr {
-  width: 90%;
+  width: 60%;
   border: 1px solid var(--text-color);
 }
 
@@ -209,7 +207,6 @@ a {
 
 .publications-container {
   padding-top: 20px;
-  background-color: var(--publications-color);
   text-align: center;
   padding-bottom: 50px;
 }
@@ -240,7 +237,7 @@ a {
 .publication img {
   width: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 8px 8px 0 0;
 }
 
 .publication h2 {
@@ -252,6 +249,10 @@ a {
 }
 
 @media screen and (max-width: 600px) {
+  hr {
+    width: 90%;
+  }
+
   .cv-container {
     margin-left: 2%;
     margin-right: 8%;
