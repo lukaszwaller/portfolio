@@ -122,8 +122,10 @@ input[type="checkbox"] {
 }
 
 .social-icon {
+  width: 30px;
+  height: 30px;
   fill: var(--text-color);
-  transition: scale 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .social-icon:hover {
