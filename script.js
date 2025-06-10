@@ -12,6 +12,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
 
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+    if (themeColorMeta) {
+      themeColorMeta.setAttribute(
+        "content",
+        theme === "dark" ? "#1a1a1a" : "#ffffff"
+      );
+    }
+
     if (theme === "dark") {
       profileAvif.srcset = "assets/avif/me-light.avif";
       profileWebp.srcset = "assets/webp/me-light.webp";
@@ -30,7 +38,9 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleSwitch.checked = currentTheme === "dark";
     setTheme(currentTheme);
   } else {
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const prefersDark =
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches;
     toggleSwitch.checked = prefersDark;
     setTheme(prefersDark ? "dark" : "light");
   }
