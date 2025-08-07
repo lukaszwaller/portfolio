@@ -4,69 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff" id="theme-color-meta">
     <title>Lukas Zwaller</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.write(`<meta name="theme-color" content="${prefersDark ? '#1a1a1a' : '#ffffff'}">`);
+    </script>
+    <script src="script.js"></script>
 </head>
 
 <header>
-    <a href="/">
-        <h1>Back to page</h1>
-    </a>
+    <h1><a href="/">Back to portfolio</a></h1>
 </header>
 
-<main>
-    <section>
-        <h1>Imprint</h1>
-        <h2>Information pursuant to Sect. 5 German Telemedia Act (TMG)</h2>
-        <p>
-            Lukas Zwaller<br>
-            Musterstr. X<br>
-            XXXXX Stuttgart<br>
-            Germany
-        </p>
-        <h2>Contact</h2>
-        <p>
-            Phone: +49 XXX XXXXXX<br>
-            E-mail: contact@lukas-zwaller.com
-        </p>
-        <h2>Liability for Contents</h2>
-        <p>
-            As service providers, we are liable for own contents of these websites according to Paragraph 7, Sect. 1
-            German Telemedia Act (TMG). However, according to Paragraphs 8 to 10 German Telemedia Act (TMG), service
-            providers are not obligated to permanently monitor submitted or stored information or to search for
-            evidences that indicate illegal activities.
-            <br><br>
-            Legal obligations to removing information or to blocking the use of information remain unchallenged. In this
-            case, liability is only possible at the time of knowledge about a specific violation of law. Illegal
-            contents will be removed immediately at the time we get knowledge of them.
-        </p>
-        <h2>Liability for Links</h2>
-        <p>
-            Our offer includes links to external third-party websites. We have no influence on the contents of those
-            websites, therefore we cannot guarantee for those contents. Providers or administrators of linked websites
-            are always responsible for their own contents.
-            <br><br>
-            The linked websites had been checked for possible violations of law at the time of the establishment of the
-            link. Illegal contents were not detected at the time of the linking. A permanent monitoring of the contents
-            of linked websites cannot be imposed without reasonable indications that there has been a violation of law.
-            Illegal links will be removed immediately at the time we get knowledge of them.
-        </p>
-        <h2>Copyright</h2>
-        <p>
-            Contents and compilations published on these websites by the providers are subject to German copyright laws.
-            Reproduction, editing, distribution as well as the use of any kind outside the scope of the copyright law
-            require a written permission of the author or originator. Downloads and copies of these websites are
-            permitted for private use only.
-            The commercial use of our contents without permission of the originator is prohibited.
-            <br><br>
-            Copyright laws of third parties are respected as long as the contents on these websites do not originate
-            from the provider. Contributions of third parties on this site are indicated as such. However, if you notice
-            any violations of copyright law, please inform us. Such contents will be removed immediately.
-        </p>
-    </section>
-</main>
+<body class="imprint-wrapper">
+<h1>Imprint</h1>
+<h2>Information pursuant to Sect. 5 German Telemedia Act (TMG)</h2>
+<p>
+    Lukas Zwaller<br>
+    Nürnberger Str. 60<br>
+    70374 Stuttgart<br>
+    Germany
+</p>
+<h2>Contact</h2>
+<p>
+    E-mail: <a target="_blank" href="mailto:contact@lukas-zwaller.com" aria-label="Email">contact@lukas-zwaller.com</a>
+</p>
+<h2>Liability for Contents</h2>
+<p>
+    As service providers, we are liable for own contents of these websites according to Paragraph 7, Sect. 1
+    German Telemedia Act (TMG). However, according to Paragraphs 8 to 10 German Telemedia Act (TMG), service
+    providers are not obligated to permanently monitor submitted or stored information or to search for
+    evidences that indicate illegal activities.
+    <br><br>
+    Legal obligations to removing information or to blocking the use of information remain unchallenged. In this
+    case, liability is only possible at the time of knowledge about a specific violation of law. Illegal
+    contents will be removed immediately at the time we get knowledge of them.
+</p>
+<h2>Liability for Links</h2>
+<p>
+    Our offer includes links to external third-party websites. We have no influence on the contents of those
+    websites, therefore we cannot guarantee for those contents. Providers or administrators of linked websites
+    are always responsible for their own contents.
+    <br><br>
+    The linked websites had been checked for possible violations of law at the time of the establishment of the
+    link. Illegal contents were not detected at the time of the linking. A permanent monitoring of the contents
+    of linked websites cannot be imposed without reasonable indications that there has been a violation of law.
+    Illegal links will be removed immediately at the time we get knowledge of them.
+</p>
+<h2>Copyright</h2>
+<p>
+    Contents and compilations published on these websites by the providers are subject to German copyright laws.
+    Reproduction, editing, distribution as well as the use of any kind outside the scope of the copyright law
+    require a written permission of the author or originator. Downloads and copies of these websites are
+    permitted for private use only.
+    The commercial use of our contents without permission of the originator is prohibited.
+    <br><br>
+    Copyright laws of third parties are respected as long as the contents on these websites do not originate
+    from the provider. Contributions of third parties on this site are indicated as such. However, if you notice
+    any violations of copyright law, please inform us. Such contents will be removed immediately.
+</p>
 </body>
 
 </html>
