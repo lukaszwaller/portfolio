@@ -1,14 +1,11 @@
-# Lukas Zwaller – Portfolio Website
+# Portfolio
 
 Welcome to my personal portfolio website!
 This site showcases my professional background, projects, and publications as a software engineer passionate about building high-quality software experiences.
 
-🌐 **Live Site**: [lukas-zwaller.com](https://lukas-zwaller.com)
-📫 **Contact**: [contact@lukas-zwaller.com](mailto:contact@lukas-zwaller.com)
-
 ---
 
-## 🧠 About
+## About
 
 This portfolio is a minimalist, responsive, and theme-toggleable static website built with **plain HTML, CSS, and JavaScript** – no frameworks, no dependencies. It reflects my design and development philosophy: clean, fast, and maintainable.
 
@@ -23,7 +20,7 @@ Features:
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```plaintext
 .
@@ -34,7 +31,7 @@ Features:
 └── imprint.html       # Legal information (imprint page)
 ```
 
-🚀 Getting Started
+### Getting Started
 
 To run this site locally:
 
@@ -46,7 +43,7 @@ cd portfolio
 Open index.html in your browser.
 No build tools or dependencies required. It’s all static.
 
-## 🛠️ Customization
+## Customization
 
 Want to build your own personal site based on this?
 
@@ -54,18 +51,17 @@ Want to build your own personal site based on this?
 2. Update the content inside index.html (structured in sections)
 3. Adjust styles in style.css, especially CSS variables for themes
 
-## 📄 License
+## License
 
 This project is open-source and available under the **MIT** License. 
 Feel free to fork and adapt it to create your own personal website – just please give credit if it helps you!
 
-## 🙌 Acknowledgements
+## Acknowledgements
 
-Made with ❤️ by Me
 Icons from official brand guidelines and SVG assets
 Font: [Roboto](https://fonts.google.com/specimen/Roboto) 
 
-## 💡 Inspiration
+## Inspiration
 
 This project is a reflection of my interest in:
 
