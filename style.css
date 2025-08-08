@@ -13,7 +13,6 @@
     --background-color: var(--background-light);
     --text-color: var(--text-light);
     --border-color: var(--border-light);
-    --publications-color: var(--publications-light);
     --publication-color: var(--publication-light);
 }
 
@@ -21,7 +20,6 @@
     --background-color: var(--background-dark);
     --text-color: var(--text-dark);
     --border-color: var(--border-dark);
-    --publications-color: var(--publications-dark);
     --publication-color: var(--publication-dark);
 }
 
@@ -44,6 +42,10 @@ a {
 input[type="checkbox"] {
     position: absolute;
     opacity: 0;
+}
+
+#address {
+    white-space: pre-line;
 }
 
 .toggle-wrapper {

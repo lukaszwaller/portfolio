@@ -20,21 +20,22 @@ document.addEventListener("DOMContentLoaded", function () {
       );
     }
 
-    if (theme === "dark") {
-      profileAvif.srcset = "assets/avif/me-light.avif";
-      profileWebp.srcset = "assets/webp/me-light.webp";
-      profileImg.src = "assets/png/me-light.png";
-    } else {
-      profileAvif.srcset = "assets/avif/me-dark.avif";
-      profileWebp.srcset = "assets/avif/me-dark.webp";
-      profileImg.src = "assets/png/me-dark.png";
+    const pictureTheme = theme === "dark" ? "light" : "dark";
+
+    if (profileAvif) {
+      profileAvif.srcset = `assets/avif/me-${pictureTheme}.avif`;
+    }
+    if (profileWebp) {
+      profileWebp.srcset = `assets/webp/me-${pictureTheme}.webp`;
+    }
+    if (profileImg) {
+      profileImg.srcset = `assets/avatars/me-${pictureTheme}.png`;
     }
   }
 
   const currentTheme = localStorage.getItem("theme");
 
   if (currentTheme) {
-    document.documentElement.setAttribute("data-theme", currentTheme);
     toggleSwitch.checked = currentTheme === "dark";
     setTheme(currentTheme);
   } else {
@@ -43,5 +44,17 @@ document.addEventListener("DOMContentLoaded", function () {
       window.matchMedia("(prefers-color-scheme: dark)").matches;
     toggleSwitch.checked = prefersDark;
     setTheme(prefersDark ? "dark" : "light");
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const parts = [
+      "many", "Ger", "\n","gart", "Stutt", "\n", "60", "Str. ", "berger ", "Nürn", "\n", "Zwaller", "Lukas "
+  ]
+  const address = parts.reverse().join("");
+
+  const addressElement = document.getElementById("address");
+  if (addressElement) {
+    addressElement.textContent = address;
   }
 });
