@@ -1,0 +1,28 @@
+on: [ push ]
+name: Deploy portfolio
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Publish to Cloudflare Pages
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Copy files
+        run: |
+          cp index.html dist/index.html
+          cp imprint.html dist/imprint.html
+          cp robots.txt dist/robots.txt
+          cp script.js dist/script.js
+          cp style.css dist/style.css
+          cp -r assets/* dist/assets
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=portfolio
