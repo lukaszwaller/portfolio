@@ -13,12 +13,14 @@ jobs:
 
       - name: Copy files
         run: |
+          mkdir dist
+          mkdir dist/assets
           cp index.html dist/index.html
           cp imprint.html dist/imprint.html
           cp robots.txt dist/robots.txt
           cp script.js dist/script.js
           cp style.css dist/style.css
-          cp -r assets/* dist/assets
+          cp -p -r assets/* dist/assets
 
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
